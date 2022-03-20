@@ -23,7 +23,7 @@ public class CommandRunner {
         while (!isEnd){
             System.out.println("Input you command (create<name>, view<name>, delete<name>, list, exit)");
             String command = bufferedReader.readLine();
-            if (command.contains("<")){
+            if (command.contains("<") && command.contains(">")){
                 Pattern pattern = Pattern.compile("(.+)<(.+)>");
                 Matcher matcher = pattern.matcher(command);
                 matcher.find();
